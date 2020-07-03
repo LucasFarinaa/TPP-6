@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Content/estilos/estilo.css">
+
+    <title>Sala de Escape</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <button class="navbar-toggler" type="button"></button>
+            <a class="navbar-brand" href="'@Url.Action("Index","Home")'">
+                <img id="logo" src="~/Content/img/logo.png" alt="Escape prision" style="width:150px;height:50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="'@Url.Action("Index","Home")'">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="'@Url.Action("tutorial","Home")'">Tutorial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="'@Url.Action("ESCIndex","Escape")'">Comenzar Juego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="'@Url.Action("habitacion1","Escape")'">Habitacion 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="'@Url.Action("habitacion2","Escape")'">Habitacion 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="'@Url.Action("habitacion3","Escape")'">Habitacion 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="'@Url.Action("habitacion4","Escape")'">Habitacion 1</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="'@Url.Action("escapedelahabitacionX","Home")'">Arribos y partidas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
